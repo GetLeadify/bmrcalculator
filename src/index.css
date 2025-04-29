@@ -2,13 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-800 font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+  
+  h1 {
+    @apply text-3xl md:text-4xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl leading-tight;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
 }
 
-input[type="number"] {
-  -moz-appearance: textfield;
-} 
+@layer components {
+  .container-custom {
+    @apply max-w-5xl mx-auto px-4 sm:px-6;
+  }
+  
+  .btn-primary {
+    @apply bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 ease-in-out;
+  }
+  
+  .btn-secondary {
+    @apply bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200 ease-in-out;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition duration-200 ease-in-out;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6;
+  }
+  
+  .fade-in {
+    @apply transition-opacity duration-500 ease-in-out;
+  }
+}

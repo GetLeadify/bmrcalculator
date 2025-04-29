@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bmrcalculator.xyz/sitemap.xml 
+Sitemap: https://bmrcalculator.xyz/sitemap.xml
